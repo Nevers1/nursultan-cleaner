@@ -1,0 +1,21 @@
+E:\альфач\альфач\bin\Release\альфач.exe.config
+E:\альфач\альфач\bin\Release\альфач.exe
+E:\альфач\альфач\bin\Release\альфач.pdb
+E:\альфач\альфач\obj\Release\альфач.csproj.AssemblyReference.cache
+E:\альфач\альфач\obj\Release\альфач.csproj.CoreCompileInputs.cache
+E:\альфач\альфач\obj\Release\альфач.exe
+E:\альфач\альфач\obj\Release\альфач.pdb
+C:\Users\pinsk\OneDrive\Рабочий стол\альфач\альфач\obj\Release\альфач.csproj.AssemblyReference.cache
+C:\Users\pinsk\OneDrive\Рабочий стол\альфач\альфач\obj\Release\альфач.csproj.CoreCompileInputs.cache
+C:\Users\pinsk\OneDrive\Рабочий стол\альфач\альфач\obj\Release\альфач.exe
+C:\Users\pinsk\OneDrive\Рабочий стол\альфач\альфач\obj\Release\альфач.pdb
+C:\Users\pinsk\OneDrive\Рабочий стол\альфач\альфач\bin\Release\альфач.exe.config
+C:\Users\pinsk\OneDrive\Рабочий стол\альфач\альфач\bin\Release\альфач.exe
+C:\Users\pinsk\OneDrive\Рабочий стол\альфач\альфач\bin\Release\альфач.pdb
+C:\альфач\альфач\bin\Release\альфач.exe.config
+C:\альфач\альфач\bin\Release\альфач.exe
+C:\альфач\альфач\bin\Release\альфач.pdb
+C:\альфач\альфач\obj\Release\альфач.csproj.AssemblyReference.cache
+C:\альфач\альфач\obj\Release\альфач.csproj.CoreCompileInputs.cache
+C:\альфач\альфач\obj\Release\альфач.exe
+C:\альфач\альфач\obj\Release\альфач.pdb

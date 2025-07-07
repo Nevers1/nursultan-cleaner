@@ -1,0 +1,7 @@
+E:\альфач\альфач\bin\Debug\альфач.exe.config
+E:\альфач\альфач\bin\Debug\альфач.exe
+E:\альфач\альфач\bin\Debug\альфач.pdb
+E:\альфач\альфач\obj\Debug\альфач.csproj.AssemblyReference.cache
+E:\альфач\альфач\obj\Debug\альфач.csproj.CoreCompileInputs.cache
+E:\альфач\альфач\obj\Debug\альфач.exe
+E:\альфач\альфач\obj\Debug\альфач.pdb
