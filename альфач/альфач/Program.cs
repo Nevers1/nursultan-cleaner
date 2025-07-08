@@ -13,26 +13,24 @@ namespace альфач
     {
         static void Main(string[] args)
         {
-            //  Console.WriteLine("[+] Запущена чистка следов NURSULTAN\n");
-            Console.WriteLine("прога тест");
+            Console.WriteLine("[+] Запущена чистка следов NURSULTAN\n");
+            //Console.WriteLine("прога тест");
             // 7. Удаление WV2Profile_nursultan
-try
-{
-    string path = Path.Combine(
-        Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
-        @"..\LocalLow\NTFLoader\");
-
-    path = Path.GetFullPath(path); // нормализуем путь
-
+        try
+        {
+         string path = Path.Combine(
+         Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+         @"..\LocalLow\NTFLoader\");
+         path = Path.GetFullPath(path);
     if (Directory.Exists(path))
     {
         Directory.Delete(path, true);
-      //  Console.WriteLine("[+] Удалена папка WV2Profile_nursultan: " + path);
+        Console.WriteLine("[+] Удалена папка WV2Profile_nursultan: " + path);
     }
 }
 catch (Exception ex)
 {
-  //  Console.WriteLine("[-] Ошибка при удалении WV2Profile_nursultan: " + ex.Message);
+    Console.WriteLine("[-] Ошибка при удалении WV2Profile_nursultan: " + ex.Message);
 }
 
             void DeleteFiles(string path, params string[] patterns)
@@ -48,13 +46,13 @@ catch (Exception ex)
                         foreach (string file in files)
                         {
                             File.Delete(file);
-                         //   Console.WriteLine("[+] Удалено: " + file);
+                            Console.WriteLine("[+] Удалено: " + file);
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                   //Console.WriteLine("[-] Ошибка при удалении в " + path + ": " + ex.Message);
+                   Console.WriteLine("[-] Ошибка при удалении в " + path + ": " + ex.Message);
                 }
             }
 
@@ -86,12 +84,12 @@ catch (Exception ex)
                 {
                     foreach (string subkey in userAssist.GetSubKeyNames())
                         userAssist.DeleteSubKeyTree(subkey);
-                //    Console.WriteLine("[+] UserAssist очищен");
+                /   Console.WriteLine("[+] UserAssist очищен");
                 }
             }
             catch (Exception ex)
             {
-               // Console.WriteLine("[-] Ошибка при очистке UserAssist: " + ex.Message);
+                Console.WriteLine("[-] Ошибка при очистке UserAssist: " + ex.Message);
             }
 
             // 6. Удаление AppCompatCache
@@ -102,15 +100,15 @@ catch (Exception ex)
                 if (key != null)
                 {
                     key.DeleteValue("AppCompatCache", false);
-                 //   Console.WriteLine("[+] AppCompatCache очищен");
+                    Console.WriteLine("[+] AppCompatCache очищен");
                 }
             }
             catch (Exception ex)
             {
-               // Console.WriteLine("[-] Ошибка при очистке AppCompatCache: " + ex.Message);
+                Console.WriteLine("[-] Ошибка при очистке AppCompatCache: " + ex.Message);
             }
 
-            //Console.WriteLine("\n[+] Очистка завершена. Нажми Enter для выхода.");
+            Console.WriteLine("\n[+] Очистка завершена. Нажми Enter для выхода.");
             Console.ReadLine();
         }
         static void DeleteFiles(string path, string pattern)
@@ -129,8 +127,31 @@ catch (Exception ex)
             }
             catch (Exception ex)
             {
-               // Console.WriteLine("[-] Ошибка при удалении в " + path + ": " + ex.Message);
+                Console.WriteLine("[-] Ошибка при удалении в " + path + ": " + ex.Message);
             }
+
+             // 8. Удаление MUICache следов
+ try
+ {
+     RegistryKey muicache = Registry.CurrentUser.OpenSubKey(
+         @"Software\Microsoft\Windows\ShellNoRoam\MUICache", true);
+
+     if (muicache != null)
+     {
+         foreach (var val in muicache.GetValueNames())
+         {
+             if (val.ToLower().Contains("nursultan"))
+             {
+                 muicache.DeleteValue(val, false);
+                 Console.WriteLine("[+] MUICache очищен: " + val);
+             }
+         }
+     }
+ }
+ catch (Exception ex)
+ {
+     Console.WriteLine("[-] Ошибка при очистке MUICache: " + ex.Message);
+ }
         }
     }
 }
